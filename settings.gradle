@@ -1,0 +1,3 @@
+rootProject.name='Vbi Component'
+include ':app'
+include ':vbi_cpn_module'
