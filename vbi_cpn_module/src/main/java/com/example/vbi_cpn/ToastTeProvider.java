@@ -1,7 +1,11 @@
 package com.example.vbi_cpn;
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static android.content.ContentValues.TAG;
 
 public class ToastTeProvider {
     public static List<ToastTesing> parse(String rssFeed) {
@@ -12,6 +16,7 @@ public class ToastTeProvider {
         for (int i = 0; i < number; i++) {
             // create sample data
             String s = String.valueOf(r.nextInt(1000));
+            Log.d(TAG, "parse: Console log from  VBI4SDK" + i);
             ToastTesing item = new ToastTesing("Summary " + s, "Description " + s);
             list.add(item);
         }
